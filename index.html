@@ -49,11 +49,21 @@
                             scratch pad
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="close_all">
+                            <i class="fa fa-window-close" aria-hidden="true"></i>
+                            close all
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>
     </header>
     <div id="wrapper">
+        <div id="dialog" title="Basic dialog">
+            <p>This is the default dialog which is useful for displaying information. The dialog window can be moved,
+                resized and closed with the 'x' icon.</p>
+        </div>
         <div class="wraaper container-fluid">
             <div class="row">
                 <div class="sidebar col-lg-2 col-sm-3">sidebar</div>
@@ -80,6 +90,14 @@
                 width: 600,
             });
             $("#dialog").css('display', 'block');
+        });
+        //make dialog
+        $(function () {
+            $("#dialog").dialog();
+        });
+        //onclick on btn close all select all dialog and close them
+        $('#close_all').click(function () {
+            $(".ui-dialog-content").dialog("close");
         });
     </script>
     <script src="js/copy-cut-paste.js" defer></script>
