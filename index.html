@@ -55,12 +55,18 @@
                             close all
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="close_all">
+                            <i class="fa fa-hourglass" aria-hidden="true"></i>
+                            <span id="countdown" class="timer"></span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>
     </header>
     <div id="wrapper">
-        <div id="dialog" title="Basic dialog">
+        <div class="dialog" title="Basic dialog">
             <p>This is the default dialog which is useful for displaying information. The dialog window can be moved,
                 resized and closed with the 'x' icon.</p>
         </div>
@@ -83,6 +89,7 @@
         </header>
         <textarea name="" id="scratch-pad-textarea" cols="30" rows="10" class="w-100"></textarea>
     </div>
+    
     <script>
         //on click(scratch pad) show it's dialog
         $('#scratch_pad').click(function () {
@@ -93,7 +100,7 @@
         });
         //make dialog
         $(function () {
-            $("#dialog").dialog();
+            $(".dialog").dialog();
         });
         //onclick on btn close all select all dialog and close them
         $('#close_all').click(function () {
@@ -114,6 +121,7 @@
             statusbar: false,
         });
     </script>
+    <script src="js/test-timer.js"></script>
 </body>
 
 </html>
