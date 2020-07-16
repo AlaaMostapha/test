@@ -1,65 +1,12 @@
-#dialog {
-    display: none;
-}
 
+/* header */
 header {
     background-color: gainsboro;
 }
 
-.tox .tox-toolbar__group:not(:last-of-type) {
-    border-right: none;
-    width: 121px;
-}
-
-button[aria-label="Strikethrough"].tox-tbtn:after {
-    content: 'strikeThrough';
-}
-
-div[aria-label="Background color"] .tox-tbtn:first-of-type:after {
-    content: 'highlight';
-}
-
-button[aria-label="Special character"].tox-tbtn:after {
-    content: 'symbol';
-}
-
-.tox .tox-tbtn {
-    width: auto !important;
-}
-
-.tox .tox-split-button {
-    width: 100% !important;
-    justify-content: space-around;
-}
-
-div[aria-label="Background color"] span[role="presentation"]:first-of-type {
-    width: 8%;
-}
-
-.tox.tox-tinymce {
-    height: 100vh !important;
-}
-
-.ui-dialog-title:before {
-    content: "\f040";
-    font-family: fontawesome;
-    padding-right: 0.3rem;
-}
-
-header#scratch-pad-dialog-header {
-    background-color: #f9f9f9e0;
-    padding: 0.4rem 0.2rem;
-
-}
-
-header#scratch-pad-dialog-header button,
-header#scratch-pad-dialog-header button:active {
-    border: 2px solid #e7e7e7;
-    border-radius: 3px;
-    font-weight: 699;
-    font-size: 15.5px;
-}
-
-.ui-widget.ui-widget-content {
-    background-color: #e9e9e9;
+/* footer */
+footer{
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }

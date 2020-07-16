@@ -21,7 +21,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- custom css -->
-    <link rel="stylesheet" href="css/style.css">
+     <!-- custom css -->
+     <link rel="stylesheet" href="css/tinymce-custom.css">
+     <link rel="stylesheet" href="css/dialog-custom.css">
+     <link rel="stylesheet" href="css/navigator-table.css">
+     <link rel="stylesheet" href="css/style.css">
+ 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <style>
@@ -70,11 +75,52 @@
             <p>This is the default dialog which is useful for displaying information. The dialog window can be moved,
                 resized and closed with the 'x' icon.</p>
         </div>
+        <div class="dialog" title="Unseen Content" id="unseen_dialog">
+            <div class="d-flex">
+                <i class="fa fa-exclamation-circle fa-2x" aria-hidden="true"></i>
+                &nbsp;&nbsp;&nbsp;
+                <p> You have not yet viewed the entire screen. Please use all
+                    scrollbars and/or open any on-screen exhibits before trying again.</p>
+            </div>
+        </div>
         <div class="wraaper container-fluid">
             <div class="row">
                 <div class="sidebar col-lg-2 col-sm-3">sidebar</div>
                 <div class="content col-lg-10 col-sm-9">content</div>
             </div>
+        </div>
+        <div class="dialog" title="Navigator" id="navigator">
+        <table class="table sortable navigator_table">
+            <thead>
+                <tr>
+                    <th>Question #</th>
+                    <th>Status</th>
+                    <th>Flagged - Review</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Question 1</td>
+                    <td>Unseen</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Question 2</td>
+                    <td>Unseen</td>
+                    <td><i class="fa fa-flag" aria-hidden="true"></i></td>
+                </tr>
+                <tr>
+                    <td>Question 3</td>
+                    <td>Unseen</td>
+                    <td><i class="fa fa-flag" aria-hidden="true"></i></td>
+                </tr>
+                <tr>
+                    <td>Question 4</td>
+                    <td>Not attempted</td>
+                    <td><i class="fa fa-flag" aria-hidden="true"></i></td>
+                </tr>
+            </tbody>
+        </table>
         </div>
     </div>
     <div id="dialog" title="Scratch pad" id="scratch-pad-dialog">
@@ -89,18 +135,26 @@
         </header>
         <textarea name="" id="scratch-pad-textarea" cols="30" rows="10" class="w-100"></textarea>
     </div>
-    
+    <footer>
+        <button id="navigator_btn">
+            <i class="fa fa-th" aria-hidden="true"></i>
+            Navigator
+        </button>
+        <button id="next_btn">
+            Next
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+        </button>
+    </footer>
+    <script>
+        $(".dialog").dialog({ autoOpen: false });
+    </script>
     <script>
         //on click(scratch pad) show it's dialog
         $('#scratch_pad').click(function () {
             $("#dialog").dialog({
                 width: 600,
-            });
+            }).prev(".ui-dialog-titlebar").addClass("pencil_icon");;
             $("#dialog").css('display', 'block');
-        });
-        //make dialog
-        $(function () {
-            $(".dialog").dialog();
         });
         //onclick on btn close all select all dialog and close them
         $('#close_all').click(function () {
@@ -122,6 +176,11 @@
         });
     </script>
     <script src="js/test-timer.js"></script>
+    <script src="js/next-scroll.js"></script>
+    <script src="js/sort-table.js"></script>
+    <script src="js/navigator-table.js"></script>
+
+</body>
 </body>
 
 </html>

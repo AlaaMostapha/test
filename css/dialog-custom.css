@@ -1,0 +1,57 @@
+/* dialog */
+
+#dialog ,
+#unseen_dialog,
+.dialog{
+    display: none;
+}
+.ui-dialog-buttonpane {
+    background-color: #e9e9e9;
+    margin-top:0;
+    border:0;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+    float: none;
+    text-align: center;
+}
+.ui-dialog .ui-dialog-buttonpane button{
+    font-weight: 600;
+    border: 1px solid #fff;
+    background: transparent;
+}
+button.cancelButtonClass.ui-button.ui-corner-all.ui-widget:hover,
+button.cancelButtonClass.ui-button.ui-corner-all.ui-widget:hover {
+    color: red;
+}
+.ui-dialog-titlebar{
+    display:flex;
+}
+#unseen_dialogs p{
+    font-weight: bold;
+}
+.ui-dialog-titlebar{
+    border:0;
+    border-bottom:1px solid #fff;
+}
+.pencil_icon:before {
+    content: "\f040";
+    font-family: fontawesome;
+    padding-right: 0.3rem;
+}
+
+header#scratch-pad-dialog-header {
+    background-color: #f9f9f9e0;
+    padding: 0.4rem 0.2rem;
+}
+
+header#scratch-pad-dialog-header button,
+header#scratch-pad-dialog-header button:active {
+    border: 2px solid #e7e7e7;
+    border-radius: 3px;
+    font-weight: 699;
+    font-size: 15.5px;
+}
+
+.ui-widget.ui-widget-content {
+    background-color: #e9e9e9;
+}
