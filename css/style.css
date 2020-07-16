@@ -3,7 +3,9 @@
 header {
     background-color: gainsboro;
 }
-
+.danger{
+    color:red;
+}
 /* footer */
 footer{
     position: absolute;

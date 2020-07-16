@@ -1,4 +1,48 @@
 /* tables */
 .table.navigator_table thead th{
-    width:7rem;
+    width: 7rem;
+    border: 1px solid #DCDDDD;
+    background: #F2F2F2;
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+    padding: 2px;
+    text-align: center;
+}
+.table.navigator_table {
+    font-weight: bold;
+}
+.table.navigator_table {
+    background-color: #fff;
+}
+.table.navigator_table tbody td{
+    padding:2px;
+    border: 1px solid #dddddd;
+    border-left: 0;
+}
+.custom-navig-dialog{
+    padding: 0!important;
+    background: #fff!important;
+    height: 200px!important;
+}
+.ui-dialog-navig .ui-dialog-buttonset{
+    text-align:right!important;
+    padding: 0;
+    padding-top: 2rem;
+}
+.ui-dialog-navig .ui-dialog-buttonpane {
+    padding:0;
+}
+.ui-dialog-navig .ui-dialog-buttonset button{
+    margin: 0;
+}
+.table.navigator_table tr:first-of-type,
+.table.navigator_table tr:hover{
+    background-color: #C5F7F2;
+}
+
+
+
+#sorttable_sortfwdind,
+#sorttable_sortrevind{
+    color:#fff;
 }

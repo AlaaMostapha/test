@@ -1,12 +1,25 @@
-
+// $.widget("ui.dialog", $.extend({}, $.ui.dialog.prototype, {
+//     _title: function(title) {
+//         if (!this.options.title ) {
+//             title.html("&#160;");
+//         } else {
+//             title.html(this.options.title);
+//         }
+//     }
+// }));
 $('#navigator_btn').click(function() {
         $("#navigator").dialog({
-            width: 600,
+            width: 683,
             autoOpen: true,
+            // title: "Navigator <span>- select a question to go to it</span>",
+            classes: {
+                "ui-dialog-content": "custom-navig-dialog",
+                "ui-dialog":"ui-dialog-navig",
+                "ui-dialog-titlebar":"block-icon"
+            },
             buttons: [
                 {
                     text: "Close",
-                    "class": 'cancelButtonClass',
                     click: function() {
                         $( this ).dialog( "close" );
                     }

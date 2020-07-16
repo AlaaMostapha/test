@@ -36,9 +36,13 @@ button.cancelButtonClass.ui-button.ui-corner-all.ui-widget:hover {
 .pencil_icon:before {
     content: "\f040";
     font-family: fontawesome;
-    padding-right: 0.3rem;
+    margin-right: 0.3rem;
 }
-
+.block-icon:before{
+    content: "\f00a";
+    font-family: fontawesome;
+    margin-right: 0.3rem;
+}
 header#scratch-pad-dialog-header {
     background-color: #f9f9f9e0;
     padding: 0.4rem 0.2rem;
@@ -54,4 +58,9 @@ header#scratch-pad-dialog-header button:active {
 
 .ui-widget.ui-widget-content {
     background-color: #e9e9e9;
+    padding: 0.5rem;
+}
+.ui-dialog .ui-dialog-content{
+    padding:0.2rem;
+    padding-top: 0;
 }
