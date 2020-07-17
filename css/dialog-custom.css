@@ -43,6 +43,11 @@ button.cancelButtonClass.ui-button.ui-corner-all.ui-widget:hover {
     font-family: fontawesome;
     margin-right: 0.3rem;
 }
+.file-icon:before{
+    content: "\f0f6";
+    font-family: fontawesome;
+    margin-right: 0.3rem;
+}
 header#scratch-pad-dialog-header {
     background-color: #f9f9f9e0;
     padding: 0.4rem 0.2rem;

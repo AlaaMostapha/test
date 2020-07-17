@@ -3,13 +3,12 @@
           $("#dialog").dialog({
               autoOpen: true,
               width: 'auto',
-              height:'auto',
-          }).prev(".ui-dialog-titlebar").addClass("pencil_icon");
+          }).prev(".ui-dialog-titlebar").addClass("file_icon");
           $("#dialog").css('display', 'block');
       });
 
 tinymce.init({
-    selector: 'textarea#full-featured-non-premium',
+    selector: '#full-featured-non-premium',
     plugins: 'print preview paste importcss searchreplace autolink autosave save directionality code visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount imagetools textpattern noneditable help charmap quickbars emoticons',
     imagetools_cors_hosts: ['picsum.photos'],
     menubar: 'file edit view insert format tools table help',
