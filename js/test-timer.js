@@ -1,5 +1,6 @@
-var upgradeTime = 1728;
-var seconds = upgradeTime;
+var start = 0;
+var reach=10;
+var seconds = start;
 
 function timer() {
     var days = Math.floor(seconds / 24 / 60 / 60);
@@ -13,11 +14,28 @@ function timer() {
         return (n < 10 ? "0" + n : n);
     }
     document.getElementById('countdown').innerHTML = pad(days) + ":" + pad(hours) + ":" + pad(minutes) + ":" + pad(remainingSeconds);
-    if (seconds == 0) {
-        clearInterval(countdownTimer);
-        document.getElementById('countdown').innerHTML = "Completed";
-    } else {
-        seconds--;
+    if(start == 0){
+        if (seconds == reach) {
+            clearInterval(countupanddownTimer);
+            document.getElementById('countdown').innerHTML = "Completed";
+        } else {
+            seconds++;
+        }
+    }else if(start > 0){
+        if(seconds == reach){
+            clearInterval(countupanddownTimer);
+            document.getElementById('countdown').innerHTML = "Completed";
+        }
+        else{
+            seconds --;
+        } 
     }
+    
+    // if (seconds == 0) {
+    //     clearInterval(countupanddownTimer);
+    //     document.getElementById('countdown').innerHTML = "Completed";
+    // } else {
+    //     seconds--;
+    // }
 }
-var countdownTimer = setInterval('timer()', 1000);
+var countupanddownTimer = setInterval('timer()', 1000);
