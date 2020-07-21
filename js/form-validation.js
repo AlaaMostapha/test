@@ -17,48 +17,64 @@ function validateForm() {
             document.forms["myForm"]["zip-code"].classList.add("danger");
             console.log(validation_msg);
             return false;
+        }else{
+            document.forms["myForm"]["zip-code"].classList.remove("danger");
         }
         if (!card_number || !card_number.match(numbers) || !card_number.length < 15 && card_number.length > 19) {
             validation_msg = "card_number must be filled out and it's length is between 15 and 19";
             document.forms["myForm"]["card-number"].classList.add("danger");
             console.log(validation_msg);
             return false;
+        }else{
+            document.forms["myForm"]["card-number"].classList.remove("danger");
         }
         if (!city || !city.match(letters)) {
             validation_msg = "state must be filled out and consists of characters";
             document.forms["myForm"]["city"].classList.add("danger");
             console.log(validation_msg);
             return false;
+        }else{
+            document.forms["myForm"]["city"].classList.remove("danger");
         }
         if (!state || !state.match(letters)) {
             validation_msg = "state must be filled out and consists of characters";
-            document.forms["myForm"]["city"].classList.add("danger");
+            document.forms["myForm"]["state"].classList.add("danger");
             console.log(validation_msg);
             return false;
+        }else{
+            document.forms["myForm"]["state"].classList.remove("danger");
         }
         if (!country || !country.match(letters)) {
             validation_msg = "country must be filled out and consists of characters";
             document.forms["myForm"]["country"].classList.add("danger");
             console.log(validation_msg);
             return false;
+        }else{
+            document.forms["myForm"]["country"].classList.remove("danger");
         }
         if (!year || !year.match(numbers) ||year.length != 2) {
             validation_msg = "year must be filled out and consists of 2 number";
             document.forms["myForm"]["year"].classList.add("danger");
             console.log(validation_msg);
             return false;
+        }else{
+            document.forms["myForm"]["year"].classList.remove("danger");
         }
         if (!month || !month.match(numbers) ||month.length != 2) {
             validation_msg = "month must be filled out and consists of 2 number";
             document.forms["myForm"]["month"].classList.add("danger");
             console.log(validation_msg);
             return false;
+        }else{
+            document.forms["myForm"]["month"].classList.remove("danger");
         }
         if (!cvc || !cvc.match(numbers) ||cvc.length != 4 ){
             validation_msg = "cvc must be filled out and consists of 2 number";
             document.forms["myForm"]["cvc"].classList.add("danger");
             console.log(validation_msg);
             return false;
+        }else{
+            document.forms["myForm"]["cvc"].classList.remove("danger");
         }
 
 }
