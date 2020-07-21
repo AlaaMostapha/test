@@ -6,6 +6,12 @@ header {
 .danger{
     color:red;
 }
+.danger{
+    border:1px solid red;
+}
+
+
+
 /* footer */
 footer{
     position: absolute;

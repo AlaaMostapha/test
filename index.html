@@ -77,8 +77,30 @@
             </div>
         </nav>
     </header>
-    <form action="">
+    <form name="myForm" action="" onsubmit="return validateForm()" method="">
+        <form>
+            <label for="zip-code">zip-code:</label>
+            <input type="number" name="zip-code" required size="15" pattern="[0-9]{15}" max="999999999999999"><br>
+            <label for="card-number">card-number:</label>
+            <input type="number" name="card-number" pattern="[0-9]{12,15}" max="999999999999999"><br>
 
+            <label for="city">city:</label>
+            <input type="text" name="city" pattern="[A-Za-z]{2,}"><br>
+            <label for="state">state:</label>
+            <input type="text" name="state" pattern="[A-Za-z]{2,}"><br>
+            <label for="country">country:</label>
+            <input type="text" name="country" pattern="[A-Za-z]{2,}"><br>
+
+            <label for="year">year:</label>
+            <input type="number" name="year"  size="2" pattern="[0-9]{2}" max="99"><br>
+            <label for="month">month:</label>
+            <input type="number" name="month" size="2" pattern="[0-9]{2}"  max="12"><br>
+
+            <label for="cvc">cvc:</label>
+            <input type="number" name="cvc" size="4" pattern="[0-9]{4}}"  max="31"><br>
+            
+            <input type="submit" value="Submit">
+          </form>
     </form>
     <div id="wrapper">
         <div class="dialog" title="Basic dialog">
@@ -159,12 +181,7 @@
             <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
         </button>
     </footer>
-    <script>
-      history.pushState(null, null, location.href);
-    window.onpopstate = function () {
-        history.go(1);
-    };
-        </script>
+  
     <script>
         $(".dialog").dialog({
             autoOpen: false
@@ -198,6 +215,8 @@
     <script src="js/navigator-table.js"></script>
     <script src="js/scratch-pad.js"></script>
     <script src="js/word-processor.js"></script>
+    <script src="js/form-validation.js"></script>
+    <script src="js/stop-go-back-browser.js"></script>
 </body>
 </body>
 
