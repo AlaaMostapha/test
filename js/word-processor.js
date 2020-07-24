@@ -4,21 +4,50 @@
           $("#dialog").dialog({
               autoOpen: true,
               width: 1000,
+              quickbars_insert_toolbar: false,
+              quickbars_image_toolbar: false,
+              quickbars_selection_toolbar: false,
+              close: function( event, ui ) {
+                //write your function here or call function here
+                tinymce.activeEditor.getContent();
+
+           // Get the raw contents of the currently active editor
+           tinymce.activeEditor.getContent({format : 'raw'});
+           
+           // Get content of a specific editor:
+           if(tinymce.get('full-featured-non-premium').getContent()!=null){
+             
+            console.log(tinymce.get('full-featured-non-premium').getContent())
+            console.log(typeof(tinymce.get('full-featured-non-premium').getContent()))
+            // console.log(JSON.parse(tinymce.get('full-featured-non-premium').getContent()))
+           }
+          }
               // height: 'auto',
           }).prev(".ui-dialog-titlebar").addClass("file_icon");
           $("#dialog").css('display', 'block');
 
           tinymce.init({
             selector: '#full-featured-non-premium',
-            plugins: 'print preview paste importcss searchreplace autolink autosave save directionality code visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount imagetools textpattern noneditable help charmap quickbars emoticons',
+            menubar: false,
+            statusbar: false,
+            plugins: 'print preview paste importcss searchreplace autolink autosave save directionality code visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount imagetools textpattern noneditable help charmap  emoticons',
             imagetools_cors_hosts: ['picsum.photos'],
-            menubar: 'file edit view insert format tools table help',
-            toolbar: 'undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist | forecolor backcolor removeformat | pagebreak | charmap emoticons | fullscreen  preview save print | insertfile image media template link anchor codesample | ltr rtl',
+            toolbar: [
+              "copy | paste cut | undo redo | searchreplace | bold italic underline strikethrough  | superscript subscript |removeformat | styleselect | table | alignleft aligncenter alignright alignjustify |  bullist numlist | outdent indent  "
+              ],   
+              style_formats: [
+                {title: 'Heading 2', format: 'h2'},
+                {title: 'Heading 3', format: 'h3'},
+                {title: 'Heading 4', format: 'h4'},
+                {title: 'Heading 5', format: 'h5'},
+                {title: 'Heading 6', format: 'h6'},
+                {title: 'Normal', block: 'div'}
+                ],           
             toolbar_sticky: true,
             autosave_ask_before_unload: true,
-            autosave_interval: "30s",
+            autosave_interval: "300s",
             autosave_prefix: "{path}{query}-{id}-",
-            autosave_restore_when_empty: false,
+            // autosave_restore_when_empty: false,
             autosave_retention: "2m",
             image_advtab: true,
             link_list: [
@@ -59,13 +88,13 @@
             template_mdate_format: '[Date Modified (MDATE): %m/%d/%Y : %H:%M:%S]',
             height: 600,
             image_caption: true,
-            quickbars_selection_toolbar: 'bold italic | quicklink h2 h3 blockquote quickimage quicktable',
             noneditable_noneditable_class: "mceNonEditable",
             toolbar_mode: 'sliding',
             contextmenu: "link image imagetools table",
            });
+
           
       });
 
 
-  
+     
