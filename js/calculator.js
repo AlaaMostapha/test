@@ -1,6 +1,7 @@
 //on click(scratch pad) show it's dialog
 $('#calculator').click(function () {
   $("#calculator_dialog").dialog({
+    resizable: false,
       width: 273,
       autoOpen: true,
       classes: {
