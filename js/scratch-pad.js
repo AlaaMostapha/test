@@ -12,7 +12,7 @@ $('#scratch_pad').click(function () {
         toolbar: ' copy | cut | paste | undo | redo ',
         menubar: false,
         statusbar: false,
-        
+        content_css: "/css/scratchpad.css"
     });
       
 });

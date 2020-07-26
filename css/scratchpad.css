@@ -1,0 +1,22 @@
+button[aria-label="Copy"],
+button[aria-label="Cut"],
+button[aria-label="Paste"],
+button[aria-label="Undo"],
+button[aria-label="Redo"]{
+    width:100%!important;
+}
+button[aria-label="Copy"]::after{
+     content:'copy';
+}
+button[aria-label="Cut"]::after{
+     content:'Cut';
+}
+button[aria-label="Paste"]::after{
+     content:'Paste';
+}
+button[aria-label="Undo"]::after{
+     content:'Undo';
+}
+button[aria-label="Redo"]::after{
+     content:'Redo';
+}
