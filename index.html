@@ -36,6 +36,16 @@
  
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/froala-editor@3.1.0/js/froala_editor.pkgd.min.js">
     </script>
+    <style>
+        button[aria-label="Strikethrough"] svg{
+            display:none!important;
+            position: absolute;
+            top:10%;
+        }
+        button[aria-label="Strikethrough"]:before{
+            font-family: FontAwesome; font-weight: 300; content: "\f007";
+        }
+    </style>
 </head>
 
 <body>
@@ -77,57 +87,60 @@
         </nav>
     </header>
     <div id="wrapper">
-        <div class="dialog" title="Basic dialog">
-            <p>This is the default dialog which is useful for displaying information. The dialog window can be moved,
-                resized and closed with the 'x' icon.</p>
-        </div>
-        <div class="dialog" title="Unseen Content" id="unseen_dialog">
-            <div class="d-flex">
-                <i class="fa fa-exclamation-circle fa-2x" aria-hidden="true"></i>
-                &nbsp;&nbsp;&nbsp;
-                <p> You have not yet viewed the entire screen. Please use all
-                    scrollbars and/or open any on-screen exhibits before trying again.</p>
+        <!-- <div class="mceNonEditable">Not editableNot Editable</div> -->
+        <div class="mceNonEditable">
+            <div class="wraaper container-fluid">
+                <div class="row">
+                    <div class="sidebar col-lg-2 col-sm-3">sidebar</div>
+                    <div class="content col-lg-10 col-sm-9">content</div>
+                </div>
             </div>
         </div>
-        <div class="wraaper container-fluid">
-            <div class="row">
-                <div class="sidebar col-lg-2 col-sm-3">sidebar</div>
-                <div class="content col-lg-10 col-sm-9">content</div>
-            </div>
+    </div>
+    <div class="dialog" title="Basic dialog">
+        <p>This is the default dialog which is useful for displaying information. The dialog window can be moved,
+            resized and closed with the 'x' icon.</p>
+    </div>
+    <div class="dialog" title="Unseen Content" id="unseen_dialog">
+        <div class="d-flex">
+            <i class="fa fa-exclamation-circle fa-2x" aria-hidden="true"></i>
+            &nbsp;&nbsp;&nbsp;
+            <p> You have not yet viewed the entire screen. Please use all
+                scrollbars and/or open any on-screen exhibits before trying again.</p>
         </div>
-        <div class="dialog" title="Navigator  - select a question to go to it" id="navigator">
-            <table class="table sortable navigator_table">
-                <thead>
-                    <tr>
-                        <th>Question #</th>
-                        <th>Status</th>
-                        <th>Flagged - Review</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Question 1</td>
-                        <td class="danger">Unseen</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Question 2</td>
-                        <td class="danger">Unseen</td>
-                        <td><i class="fa fa-flag" aria-hidden="true"></i></td>
-                    </tr>
-                    <tr>
-                        <td>Question 3</td>
-                        <td class="danger">Unseen</td>
-                        <td><i class="fa fa-flag" aria-hidden="true"></i></td>
-                    </tr>
-                    <tr>
-                        <td>Question 4</td>
-                        <td class="danger">Not attempted</td>
-                        <td><i class="fa fa-flag" aria-hidden="true"></i></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    </div>
+    <div class="dialog" title="Navigator  - select a question to go to it" id="navigator">
+        <table class="table sortable navigator_table">
+            <thead>
+                <tr>
+                    <th>Question #</th>
+                    <th>Status</th>
+                    <th>Flagged - Review</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Question 1</td>
+                    <td class="danger">Unseen</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Question 2</td>
+                    <td class="danger">Unseen</td>
+                    <td><i class="fa fa-flag" aria-hidden="true"></i></td>
+                </tr>
+                <tr>
+                    <td>Question 3</td>
+                    <td class="danger">Unseen</td>
+                    <td><i class="fa fa-flag" aria-hidden="true"></i></td>
+                </tr>
+                <tr>
+                    <td>Question 4</td>
+                    <td class="danger">Not attempted</td>
+                    <td><i class="fa fa-flag" aria-hidden="true"></i></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <div id="dialog" title="Word Processor" id="word-processor-dialog">
         <textarea id="full-featured-non-premium">
@@ -180,7 +193,7 @@
 
         tinymce.init({
             selector: "#wrapper",
-            plugins: "charmap",
+            plugins: "charmap noneditable",
             toolbar: "strikethrough | backcolor | charmap ",
             menubar: false,
             statusbar: false,
