@@ -16,7 +16,11 @@
     <link rel="stylesheet" href="css/dialog-custom.css">
 
 </head>
-<body>
+<body onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="">
+  <a class="nav-link" href="index.html" id="scratch_pad">
+    <i class="fa fa-pencil" aria-hidden="true"></i>
+   index
+</a>
     <button id="calculator">calculator</button>
     <div class="dialog" title="calculator dialog" id="calculator_dialog">
         <div class='container-fluid'>
@@ -233,6 +237,6 @@
 <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.2/js/bootstrap-switch.min.js'></script>
 <script  src="js/calculator.js"></script>
-
+<script src="js/stop-go-back-browser.js"></script>
 </body>
 </html>

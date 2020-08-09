@@ -48,7 +48,7 @@
     </style>
 </head>
 
-<body>
+<body onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="">
     <header class="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand">Explain Answwer</a>
@@ -58,6 +58,12 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="calculator.html" id="scratch_pad">
+                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                            calculator
+                        </a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" id="scratch_pad">
                             <i class="fa fa-pencil" aria-hidden="true"></i>
