@@ -28,7 +28,8 @@
     <!-- <link rel="stylesheet" href="css/tinymce-custom.css"> -->
     <link rel="stylesheet" href="css/dialog-custom.css">
     <link rel="stylesheet" href="css/navigator-table.css">
-  
+    <link rel="stylesheet" href="css/help-dialog.css">
+
     <link rel="stylesheet" href="css/style.css">
 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -77,6 +78,16 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#" id="start_exam">
+                            start exam
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="help">
+                           help
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#" id="close_all">
                             <i class="fa fa-window-close" aria-hidden="true"></i>
                             close all
@@ -104,7 +115,49 @@
             </div>
         
     </div>
-    
+    <div id="dialog" title="Word Processor" id="word-processor-dialog">
+        <textarea id="full-featured-non-premium">
+        </textarea>
+    </div>
+    <div class="dialog" title="Ready to begin?" id="start_exam_dialog">
+        <div style="display: flex;margin-top: 0.5rem;">
+            <div class="m-3">
+                <i class="fa fa-question" style="border: 2px solid;
+                    border-radius: 50%;
+                    padding: 5px 9px;"></i>
+            </div>
+            <div>
+                <p>If you are ready to begin your exam, please click 'Yes'.</p>
+                <p>If you are not ready to begin your exam, please click 'No'.</p>
+            </div>
+        </div>
+    </div>
+    <div class="dialog" title="Help" id="help_dialog">
+        <div id="tabs">
+            <ul>
+              <li><a href="#tabs-1">Workspace Help</a></li>
+              <li><a href="#tabs-2">Exam Instructions</a></li>
+            </ul>
+            <div id="tabs-1">
+              <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+            </div>
+            <div id="tabs-2">
+              <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+            </div>
+          </div>
+    </div>
+    <div class="dialog" title="Scratch pad" id="scratch-pad-dialog">
+        <!-- <header id="scratch-pad-dialog-header">
+            <button type="button" value="Cut" onclick="cutTxt()"><i class="fa fa-cut" data-clipboard-action="cut"
+                    data-clipboard-target="#scratch-pad-textarea"></i>&nbsp;Cut</button>
+            <button type="button" value="copy" onclick="copyTxt()" data-clipboard-target="#scratch-pad-textarea">
+                <i class="fa fa-copy"></i>&nbsp;Copy</button>
+            <button type="button" value="Paste" onclick="paste()"><i class="fa fa-paste"></i>&nbsp;Paste</button>
+            <button id="undo"><i class="fa fa-undo"></i>&nbsp;undo</button>
+            <button id="redo"><i class="fa fa-repeat"></i>&nbsp;redo</button>
+        </header> -->
+        <textarea name="" id="scratch-pad-textarea" cols="30" rows="10" class="w-100"></textarea>
+    </div>
     <div class="dialog" title="Navigator  - select a question to go to it" id="navigator">
         <table class="table sortable navigator_table">
             <thead>
@@ -137,22 +190,6 @@
                 </tr>
             </tbody>
         </table>
-    </div>
-    <div id="dialog" title="Word Processor" id="word-processor-dialog">
-        <textarea id="full-featured-non-premium">
-        </textarea>
-    </div>
-    <div class="dialog" title="Scratch pad" id="scratch-pad-dialog">
-        <!-- <header id="scratch-pad-dialog-header">
-            <button type="button" value="Cut" onclick="cutTxt()"><i class="fa fa-cut" data-clipboard-action="cut"
-                    data-clipboard-target="#scratch-pad-textarea"></i>&nbsp;Cut</button>
-            <button type="button" value="copy" onclick="copyTxt()" data-clipboard-target="#scratch-pad-textarea">
-                <i class="fa fa-copy"></i>&nbsp;Copy</button>
-            <button type="button" value="Paste" onclick="paste()"><i class="fa fa-paste"></i>&nbsp;Paste</button>
-            <button id="undo"><i class="fa fa-undo"></i>&nbsp;undo</button>
-            <button id="redo"><i class="fa fa-repeat"></i>&nbsp;redo</button>
-        </header> -->
-        <textarea name="" id="scratch-pad-textarea" cols="30" rows="10" class="w-100"></textarea>
     </div>
     <footer>
         <button id="navigator_btn">
@@ -215,6 +252,9 @@
     <script src="js/word-processor.js"></script>
     <script src="js/form-validation.js"></script>
     <script src="js/stop-go-back-browser.js"></script>
+    <script src="js/start-exam.js"></script>
+    <script src="js/help.js"></script>
+
 </body>
 </body>
 

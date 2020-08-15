@@ -1,0 +1,57 @@
+.help-dialog .ui-tabs ,
+.help-dialog .ui-tabs .ui-tabs-nav,
+.help-dialog .ui-tabs [id^=tabs]{
+    padding:0;
+    border: 0;
+    margin-top: 0.2rem;
+}
+.help-dialog .ui-tabs{
+    background: #fff;
+}
+
+.help-dialog .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+    padding: 0em .3em;
+}
+.help-dialog .ui-tabs .ui-tabs-nav li{
+    margin:0;
+    border-top-left-radius: 5px;
+}
+.help-dialog .ui-tabs [id^=tabs]{
+    background-color:#fff;
+    padding: 0.6rem;
+}
+.help-dialog  .ui-state-default,
+.help-dialog  .ui-widget-content .ui-state-default,
+.help-dialog  .ui-widget-header .ui-state-default,
+.help-dialog  html .ui-button.ui-state-disabled:active{
+    background-color: #a9a9a9;
+}
+.help-dialog .ui-state-active,
+.help-dialog .ui-widget-content .ui-state-active,
+.help-dialog .ui-widget-header .ui-state-active,
+.help-dialog a.ui-button:active,
+.help-dialog .ui-button:active,
+.help-dialog .ui-button.ui-state-active:hover{
+    background-color:#fff;
+    border:0;
+}
+.help-dialog  .ui-state-active a,
+.help-dialog  .ui-state-active a:link,
+.help-dialog  .ui-state-active a:visited{
+    color: #000;
+}
+.help-dialog .ui-widget-header{
+    padding-left:0;
+}
+.help-dialog .ui-dialog-titlebar.question-icon:before{
+    content: "\f128";
+    font-family: fontawesome;
+    margin-right: 0.3rem;
+    border: 2px solid;
+    border-radius: 50%;
+    padding: 1px 9px;
+    border-collapse: separate;
+}
+.help-dialog .help-dialog .ui-tabs .ui-tabs-nav li:active{
+    border:0;
+}

@@ -15,7 +15,8 @@ $('#navigator_btn').click(function() {
             classes: {
                 "ui-dialog-content": "custom-navig-dialog",
                 "ui-dialog":"ui-dialog-navig",
-                "ui-dialog-titlebar":"block-icon"
+                "ui-dialog-titlebar":"block-icon",
+                "ui-button-icon":"ui-button-icon-restyle"
             },
             buttons: [
                 {
